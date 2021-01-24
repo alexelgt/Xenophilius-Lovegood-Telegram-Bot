@@ -1,520 +1,609 @@
+<!DOCTYPE html>
 <html lang='es' xml:lang='es'>
-  <head>
-      <title>Documentación Xenophilius Lovegood Bot</title>
-		  <meta name="title" content="Documentación Xenophilius Lovegood Bot">
-      <meta name="keywords" content="Documentación Xenophilius Lovegood Bot">
-      <meta name="description" content="Documentación de Xenophilius Lovegood Bot">
-      <link rel="icon" sizes="192x192" href="icon_circle.png">
-      <link rel="apple-touch-icon-precomposed" href="icon.png">
-      <meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no, viewport-fit=cover" name="viewport">
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <link href="style.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Documentación Xenophilius Lovegood Bot</title>
+  <meta name="title" content="Documentación Xenophilius Lovegood Bot" />
+  <meta name="keywords" content="Documentación Xenophilius Lovegood Bot" />
+  <meta name="description" content="Documentación de Xenophilius Lovegood Bot" />
+  <meta name="author" content="Alexelgt" />
+  <link rel="icon" sizes="192x192" href="icon_circle.png" />
+  <link rel="apple-touch-icon-precomposed" href="icon.png" />
+  <meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, viewport-fit=cover" name="viewport" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="sideBar.js" async></script>
+</head>
+<body>
+  <header>
+    <div id="hamburger" onclick='triggerSideBar();'></div>
+    <h1>Telegram Xenophilius Bot</h1>
+  </header>
 
-    <div id="sidebar-overlay" onclick='triggerSideBar();'></div>
+  <main class="flex">
+    <section>
+      <div>
+        <img class="icon" src="icon.png" alt="icon">
+        <h3 class="text-center"><a href="https://t.me/XenophiliusLovegoodBot" target="_blank" rel="noopener">@XenophiliusLovegoodBot</a></h3>
 
-    <div id="navbar">
-      <h1>Bot de Telegram Xenophilius Lovegood Bot</h1>
-    </div>
-
-    <div id="structure">
-
-      <div id="card" class="padding">
-
-        <div id="block">
-          <div id="block_structure">
-            <div id="element">
-              <img id="icon" src="icon.png">
-              <h2 class="app_title"><a href="https://t.me/XenophiliusLovegoodBot" target="_blank">@XenophiliusLovegoodBot</a></h2>
-
-              <div class="text_block">
-                <p>
-                  <b>Grupo de ayuda:</b> <a href="https://t.me/joinchat/AAC_TRrlTozAn6s2A8JlKA" target="_blank"><b>enlace</b></a><br>
-                </p>
-                <p>
-                  <a href="https://github.com/alexelgt/Xenophilius-Lovegood-Telegram-Bot" target="_blank"><b>GitHub Repo</b></a>
-                </p>
-              </div>
-
-              <div class="text_block info">
-                <ul>
-                  <li><a href="#usuario_doc">Documentación para usuarios</a></li>
-                  <ul>
-                    <li><a href="#usuario_eventos">Eventos</a></li>
-                    <li><a href="#usuario_comandos">Comandos</a></li>
-                  </ul>
-                  <li><a href="#admin_doc">Documentación para administradores</a></li>
-                  <ul>
-                    <li><a href="#admin_ajustes">Ajustes</a></li>
-                    <ul>
-                      <li><a href="#admin_activar_o_desactivar_bot">Activar o desactivar el bot</a></li>
-                      <li><a href="#admin_ajustes_generales">Ajustes generales</a></li>
-                      <ul>
-                        <li><a href="#admin_comandos">Comandos</a></li>
-                        <li><a href="#admin_borrar_mensajes_comunes">Borrar mensajes comunes</a></li>
-                        <li><a href="#admin_borrar_camigos">Borrar códigos de amigos</a></li>
-                        <li><a href="#admin_anti_spam">Anti Spam</a></li>
-                        <li><a href="#admin_pulsar_boton_hablar">Pulsar botón para hablar</a></li>
-                      </ul>
-                      <li><a href="#admin_eventos">Eventos</a></li>
-                      <li><a href="#admin_temporizadores">Temporizadores</a></li>
-                      <li><a href="#admin_notificaciones_nocturnas">Notificaciones nocturnas</a></li>
-                      <li><a href="#admin_zona_horaria">Zona horaria</a></li>
-                      <li><a href="#admin_idioma">Idioma</a></li>
-                    </ul>
-                    <li><a href="#admin_botones">Botones</a></li>
-                    <li><a href="#admin_alertas">Alertas</a></li>
-                    <ul>
-                      <li><a href="#admin_alertas_anclar">Anclar una alerta</a></li>
-                      <li><a href="#admin_alertas_obtener">Obtener una alerta</a></li>
-                      <li><a href="#admin_alertas_borrar">Eliminar una alerta</a></li>
-                    </ul>
-                    <li><a href="#admin_mensaje_bienvenida">Mensaje de bienvenida</a></li>
-                    <li><a href="#admin_etiquetas_html">Etiquetas HTML en mensajes</a></li>
-                  </ul>
-                  <li><a href="#admin_tablas_informacion">Tablas con información</a></li>
-                  <ul>
-                    <li><a href="#admin_tabla_funcionalidades">Funcionalidades</a></li>
-                    <li><a href="#admin_tabla_permisos">Permisos</a></li>
-                  </ul>
-                  <li><a href="#faq">Preguntas frecuentes</a></li>
-                    <ul>
-                      <li><a href="#faq_evitar_spam">¿Cómo evito el spam?</a></li>
-                    </ul>
-                  </ul>
-                </ul>
-              </div>
-
-              <h1 id="usuario_doc">Documentación para usuarios</h1>
-              <h2 id="usuario_eventos">1. Eventos</h2>
-              <div class="text_block info">
-                <p>
-                  La funcionalidad principal disponible en grupos y por privados es un listado de eventos el cual se puede pedir con el comando <span class="highlight">/eventos</span> o escribiendo <span class="highlight">listado de eventos</span>.
-                </p>
-                <p>
-                  <b>Canales de eventos:</b><br>
-                  <ul style="list-style-type: disc">
-                    <li>Europe/Madrid: <a href="https://t.me/eventoswuspain" target="_blank">@eventoswuspain</a> | <a href="https://twitter.com/HPWUEventos" target="_blank">Twitter</a></li>
-                  </ul>
-                </p>
-              </div>
-
-              <h2 id="usuario_comandos">2. Comandos</h2>
-              <div class="text_block info">
-                <p>
-                  Xenophilius Lovegood Bot responderá a diversas frases como por ejemplo:
-                </p>
-                <p>
-                  En el futuro se añadirán comandos.
-                </p>
-              </div>
-
-              <h1 id="admin_doc">Documentación para administradores</h1>
-              <h2 id="admin_ajustes">1. Ajustes</h2>
-              <div class="text_block info">
-                <p>
-                  Para acceder a los ajustes del bot pon el comando <span class="highlight">/settings@XenophiliusLovegoodBot</span>.
-                </p>
-              </div>
-
-              <h2 id="admin_activar_o_desactivar_bot">1.1. Activar o desactivar el bot</h2>
-              <div class="text_block info">
-                <p>
-                  Permite activar o desactivar el bot. Cuando está desactivado se mantiene activo lo siguiente:
-                </p>
-                <ul style="list-style-type: disc">
-                  <li>Comandos solo disponibles para administradores (para ahorrar comprobaciones).</li>
-                  <li>Anti Spam</li>
-                  <li>Pulsar botón para hablar</li>
-                  <li>Mensaje de bienvenida</li>
-                </ul>
-              </div>
-
-              <h2 id="admin_ajustes_generales">1.2. Ajustes generales</h2>
-              <h3 id="admin_comandos">1.2.1. Comandos</h3>
-              <div class="text_block info">
-                <p>
-                  Para activar o desactivar la opción de <a href="#usuario_comandos">comandos</a>.
-                </p>
-              </div>
-
-              <h3 id="admin_borrar_mensajes_comunes">1.2.2. Borrar mensajes comunes</h3>
-              <div class="text_block info">
-                <p>
-                  Si se activa esta opción, Xenophilius Lovegood Bot borrará mensajes del estilo "alguién más se apunta", "si va más gente me apunto", "estoy por apuntarme a", etc.
-                </p>
-              </div>
-
-              <h3 id="admin_borrar_camigos">1.2.3. Borrar códigos de amigo</h3>
-              <div class="text_block info">
-                <p>
-                  Con esta opción se borrarán los mensajes que contengan códigos de amigos. Se incluyen capturas de pantalla (salvo las que estén recortadas de forma extraña). Para borrar los mensajes.
-                </p>
-                <p>
-                  Se puede poner un mensaje cuando el Xenophilius Lovegood Bot borra un código de amigo usando el comando <span class="highlight">/fctextxeno seguido del mensaje que quieres poner</span>.
-                </p>
-                <p>
-                  Para borrar el mensaje pon <span class="highlight">/fctextxeno -</span>.
-                </p>
-                <p>
-                  Para obtener el mensaje actual usa el comando <span class="highlight">/getfctextxeno</span>.
-                </p>
-              </div>
-
-              <h3 id="admin_anti_spam">1.2.4. Anti Spam</h3>
-              <div class="text_block info">
-                <p>
-                  Xenophilius Lovegood Bot borrará los mensajes de spam y baneará al miembro que mandé el mensaje de forma silenciosa. Se banea si se ponen enlaces del tipo http://t.cn y http://bit.ly (enlaces que suelen poner las cuentas de spam).
-                </p>
-              </div>
-
-              <h3 id="admin_pulsar_boton_hablar">1.2.5. Pulsar botón para hablar</h3>
-              <div class="text_block info">
-                <p>
-                  Con esta opción cuando entre un nuevo miembro al grupo tendrá que responder a una pregunta pulsando un botón. <b>El mensaje tiene un retardo de 1 segundo para que en el caso de tener un bot con mensaje de bienvenida, esta se muestre primero.</b>
-                </p>
-                <p>
-                  Si se tiene un mensaje de bienvenida configurado con otro bot y se quiere usar esta opción, lo más recomendable es configurar el <a href="#admin_mensaje_bienvenida">mensajes de bienvenida</a> con Xenophilius Lovegood Bot ya que solo se mostraría si el nuevo miembro pulsa el botón correcto.
-                </p>
-                <img id="example" src="images/press_button_to_talk.jpg">
-              </div>
-
-              <h2 id="admin_eventos">1.3. Eventos</h2>
-              <div class="text_block info">
-                <p>
-                  Si no has activado los eventos, te pedirá que actives lo actives. Después de hacer esto (o si ya las tenías activadas), podrás activar o desactivar el comando <span class="highlight">/eventos</span>, la notificación diaria (a las 8:45) con el listado de eventos o las notificaciones cuando empieza o termina un evento.
-                </p>
-                <p>
-                  <i>Para poder modificar estos ajustes el grupo tiene que tener por lo menos 16 miembros.</i>
-                </p>
-              </div>
-
-              <h2 id="admin_temporizadores">1.4. Temporizadores</h2>
-              <div class="text_block info">
-                <p>
-                  Permite que se borren algunos mensajes pasado el tiempo que se indique.
-                </p>
-              </div>
-
-              <h2 id="admin_notificaciones_nocturnas">1.5. Notificaciones nocturnas</h2>
-              <div class="text_block info">
-                <p>
-                  Permite configurar el comportamiento del algunos mensajes que se manden de 1:00 a 7:59.
-                </p>
-                <p>
-                  ✅: enviar con sonido<br>
-                  🔇: enviar sin sonido<br>
-                  ❌: no enviar
-                </p>
-              </div>
-
-              <h2 id="admin_zona_horaria">1.6. Zona horaria</h2>
-              <div class="text_block info">
-                <p>
-                  Permite cambiar la zona horaria del grupo. Esto sirve para recibir las notificaciones de los eventos y las alertas cuando corresponden.
-                </p>
-              </div>
-
-              <h2 id="admin_idioma">1.7. Idioma</h2>
-              <div class="text_block info">
-                <p>
-                  Permite cambiar el idioma del bot.
-                </p>
-              </div>
-
-              <h2 id="admin_botones">2. Botones</h2>
-              <div class="text_block info">
-                <p>
-                  Se pueden incluir botones en las <a href="#admin_alertas">alertas</a>, <a href="#admin_borrar_camigos">mensaje al borrar un código de amigo</a> y <a href="#admin_mensaje_bienvenida">mensajes de bienvenida</a>.
-                </p>
-                <p>
-                  Además se puede usar el comando <span class="highlight">/xenobotones</span> para que el bot devuelva un mensaje con botones.
-                </p>
-                <p>
-                  <b>Formato:</b>
-                </p>
-                <p>
-                  <span class="highlight">"Texto botón" = "https://enlace.com"</span>
-                </p>
-                <p>
-                  Para poner más de un botón en la misma fila, pon una coma. Ejemplo:
-                </p>
-                <p>
-                  <span class="highlight">"Texto 1" = "https://enlace1.com", "Texto 2" = "https://enlace2.com"</span>
-                </p>
-                <p>
-                  <b>Ejemplo:</b>
-                </p>
-                <p>
-                  <span class="highlight">Texto<br>"Texto botón" = "https://enlace.com"</span>
-                </p>
-              </div>
-
-              <h2 id="admin_alertas">3. Alertas</h2>
-              <div class="text_block info">
-                <p>
-                  Se pueden mandar mensajes de forma periódica. Hay un límite de <b>10</b> alertas y se configuran con el comando <span class="highlight">/alertxeno</span>.
-                </p>
-                <p>
-                  <b>Ejemplo del comando:</b>
-                </p>
-                <p>
-                  <span class="highlight">/alertxeno 1 2019/10/14-12 3 10-18 Texto alerta</span>
-                </p>
-                <p>
-                  <b>Ayuda:</b>
-                </p>
-                <p>
-                  1: número de la alerta (puede ser un número entre 1 y 10)
-                </p>
-                <p>
-                  2019/10/14-12: fecha de referencia con el formato: año/mes/día-hora
-                </p>
-                <p>
-                  3: frecuencia en horas con la que se repite la alerta
-                </p>
-                <p>
-                  10-18: período de tiempo en el que se manda la alerta
-                </p>
-              </div>
-
-              <h3 id="admin_alertas_anclar">3.1. Anclar una alerta</h3>
-              <div class="text_block info">
-                <p>
-                  Si quieres que el Xenophilius Lovegood Bot ancle la alerta que manda puedes usar los parámetros <span class="highlight">anclarnotificar</span> (notifica a los miembros del grupo) o <span class="highlight">anclar</span>.
-                </p>
-                <p>
-                  Ejemplo: <span class="highlight">/alertxeno 1 2019/10/14-12 3 10-18 anclarnotificar Texto alerta</span>.
-                </p>
-              </div>
-
-              <h3 id="admin_alertas_obtener">3.2. Obtener una alerta</h3>
-              <div class="text_block info">
-                <p>
-                  Si tienes una alerta y quieres editarla puedes obtener el contenido de la alerta (lo que pusiste con el comando <span class="highlight">/alertxeno</span>). Para ello usa el comando <span class="highlight">/getalert</span> seguido del número de la alerta. Ejemplo: <span class="highlight">/getalert 1</span>
-                </p>
-                <p>
-                  Si quieres ver todas las alertas del grupo escribe <span class="highlight">/getalert all</span>.
-                </p>
-              </div>
-
-              <h3 id="admin_alertas_borrar">3.3. Eliminar una alerta</h3>
-              <div class="text_block info">
-                <p>
-                  Para eliminar una alerta escribe el comando <span class="highlight">/alertxeno</span> seguido del número de la alerta y después -. Ejemplo: <span class="highlight">/alertxeno 1 -</span>.
-                </p>
-              </div>
-
-              <h2 id="admin_mensaje_bienvenida">4. Mensaje de bienvenida</h2>
-              <div class="text_block info">
-                <p>
-                  Para añadir un mensaje de bienvenida usa el comando <span class="highlight">/welcomexeno seguido del mensaje de bienvenida</span>.
-                </p>
-                <p>
-                  Ejemplo: <span class="highlight">/welcomexeno Hola mago</span>.
-                </p>
-                <p>
-                  Para borrar el mensaje de bienvenida pon <span class="highlight">/welcomexeno -</span>.
-                </p>
-                <p>
-                  Para consultar el mensaje de bienvenida actual pon <span class="highlight">/getwelcomexeno</span>.
-                </p>
-                <p>
-                  <b>Sustitución de texto:</b>
-                </p>
-                <ul>
-                  <li><b>Nombre del nuevo miembro:</b> <span class="highlight">{user_name}</span>.</li>
-                  <li><b>Nombre del nuevo miembro e id:</b> <span class="highlight">{user_name_id}</span>.</li>
-                  <li><b>Nombre del grupo:</b> <span class="highlight">{chat_title}</span>.</li>
-                </ul>
-              </div>
-
-              <h2 id="admin_etiquetas_html">5. Etiquetas HTML en mensajes</h2>
-              <div class="text_block info">
-                <p>
-                  Se pueden añadir etiquetas html en <a href="#admin_alertas">alertas</a>, <a href="#admin_borrar_camigos">mensaje al borrar un código de amigo</a>, <a href="#admin_mensaje_bienvenida">mensajes de bienvenida</a> y con el <a href="#admin_botones">comando /xenobotones</a>.
-                </p>
-                <p>
-                  <b>Etiquetas:</b>
-                </p>
-                <ul>
-                  <li><b>Negrita:</b> &lt;b&gt;texto&lt;/b&gt;</li>
-                  <li><i>Cursiva:</i> &lt;i&gt;texto&lt;/i&gt;</li>
-                  <li><u>Subrayado:</u> &lt;u&gt;texto&lt;/u&gt;</li>
-                  <li><s>Tachado:</s> &lt;s&gt;texto&lt;/s&gt;</li>
-                  <li><code>Mono espaciado:</code> &lt;code&gt;texto&lt;/code&gt;</li>
-                </ul>
-              </div>
-
-              <h1 id="admin_tablas_informacion">Tablas con información</h1>
-              <div class="text_block info">
-                <p>
-                  A continuación se muestran unas tablas con información adicional del bot.
-                </p>
-              </div>
-
-              <h2 id="admin_tabla_funcionalidades">1. Funcionalidades</h2>
-              <div class="text_block info">
-                <p>
-                  <b>Leyenda:</b><br>
-                  ✅: disponible<br>
-                  ❌: no disponible<br>
-                  <b>?</b>: desactivado por defecto<br>
-                  👨‍👩‍👧‍👦: solo grupos con +16 miembros
-                </p>
-                <table id="Output_table_data">
-                  <tr>
-                    <th>Funcionalidad</th>
-                    <th>Privado</th>
-                    <th>Grupos</th>
-                  </tr>
-                  <tr>
-                    <td>Comando eventos</td>
-                    <td>✅</td>
-                    <td><b>?</b>👨‍👩‍👧‍👦</td>
-                  </tr>
-                  <tr>
-                    <td>Notificación diaria (eventos)</td>
-                    <td>❌</td>
-                    <td><b>?</b>👨‍👩‍👧‍👦</td>
-                  </tr>
-                  <tr>
-                    <td>Notificación evento empezado/terminado</td>
-                    <td>❌</td>
-                    <td><b>?</b>👨‍👩‍👧‍👦</td>
-                  </tr>
-                  <tr>
-                    <td>Comandos</td>
-                    <td>✅</td>
-                    <td><b>?</b></td>
-                  </tr>
-                  <tr>
-                    <td>Ajustes</td>
-                    <td>❌</td>
-                    <td>✅</td>
-                  </tr>
-                  <tr>
-                    <td>Alertas</td>
-                    <td>❌</td>
-                    <td>✅</td>
-                  </tr>
-                  <tr>
-                    <td>Borrar mensajes comunes</td>
-                    <td>❌</td>
-                    <td><b>?</b></td>
-                  </tr>
-                  <tr>
-                    <td>Borrar códigos de amigos</td>
-                    <td>❌</td>
-                    <td><b>?</b></td>
-                  </tr>
-                  <tr>
-                    <td>Anti Spam</td>
-                    <td>❌</td>
-                    <td><b>?</b></td>
-                  </tr>
-                  <tr>
-                    <td>Pulsar botón para hablar</td>
-                    <td>❌</td>
-                    <td><b>?</b></td>
-                  </tr>
-                  <tr>
-                    <td>Mensaje de bienvenida</td>
-                    <td>❌</td>
-                    <td>✅</td>
-                  </tr>
-                </table>
-              </div>
-
-              <h2 id="admin_tabla_permisos">2. Permisos necesarios</h2>
-              <div class="text_block info">
-                <p>
-                  <b>Si el grupo tiene el modo lento activado es muy recomendable que se añada al bot como administrador para que no se le apliquen las restricciones de tiempo al mandar mensajes.</b>
-                </p>
-                <table id="Output_table_data">
-                  <tr>
-                    <th>Funcionalidad</th>
-                    <th>Permisos</th>
-                  </tr>
-                  <tr>
-                    <td>Comando eventos</td>
-                    <td>Eliminar mensajes (recomendado)</td> 
-                  </tr>
-                  <tr>
-                    <td>Notificación diaria (eventos)</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Notificación evento empezado/terminado</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Comandos</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Ajustes</td>
-                    <td>Eliminar mensajes (recomendado)</td>
-                  </tr>
-                  <tr>
-                    <td>Alertas</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Anclar alertas</td>
-                    <td>Anclar mensajes</td>
-                  </tr>
-                  <tr>
-                    <td>Borrar mensajes comunes</td>
-                    <td>Eliminar mensajes</td>
-                  </tr>
-                  <tr>
-                    <td>Borrar códigos de amigos</td>
-                    <td>Eliminar mensajes</td>
-                  </tr>
-                  <tr>
-                    <td>Anti Spam</td>
-                    <td>Eliminar mensajes, suspender usuarios</td>
-                  </tr>
-                  <tr>
-                    <td>Pulsar botón para hablar</td>
-                    <td>Eliminar mensajes (recomendado), suspender usuarios</td>
-                  </tr>
-                  <tr>
-                    <td>Mensaje de bienvenida</td>
-                    <td>-</td>
-                  </tr>
-                </table>
-              </div>
-
-              <h1 id="faq">Preguntas frecuentes</h1>
-              <h2 id="faq_evitar_spam">1. ¿Cómo evito el spam?</h2>
-              <div class="text_block info">
-                <p>
-                  El bot cuenta con 2 opciones para evitar el spam:
-                  <ul style="list-style-type: disc">
-                    <li><a href="#admin_anti_spam">Anti Spam</a></li>
-                    <li><a href="#admin_pulsar_boton_hablar">Pulsar botón para hablar</a></li>
-                  </ul>
-                </p>
-                <p>
-                  La primera sirve para banear las cuentas que ya estén en el grupo y manden un mensaje que el bot considere como spam.
-                </p>
-                <p>
-                  La segunda sirve para evitar que las cuentas que mandan spam se queden en el grupo. <b>En la práctica esta opción es la más efectiva ya que el filtro anti spam podría no saltar.</b>
-                </p>
-              </div>
-
-            </div>
-
-          </div>
+        <div class="buttons flex">
+          <a href="en/" class="btn">English</a>
         </div>
 
-      </div>
-       
-    </div>
+        <p class="text-center">
+          <b>Grupo de ayuda:</b> <a href="https://t.me/kingcasualbotayuda" target="_blank" rel="noopener"><b>@kingcasualbotayuda</b></a><br>
+        </p>
+        <p class="text-center">
+          <a href="https://github.com/alexelgt/Xenophilius-Lovegood-Telegram-Bot" target="_blank" rel="noopener"><b>GitHub Repo</b></a>
+        </p>
 
-  </bod>
+        <section class="donors">
+          <h3>Donadores</h3>
+          <p>
+            El bot puede seguir funcionando gracias a las donaciones de la gente que ayudan desde <b><u><a href="https://www.patreon.com/alexelgt" target="_blank" rel="noopener">Patreon</a></u></b>.
+            <br><br>
+            Si realizas una donación puedes hacer que los grupos de los que eres creador pasen a ser <a href="#admin_grupos_premium">premium</a> durante un tiempo determinado.
+          </p>
+          <img class="ball" src="images/HonorBall.png" alt="Honor Ball"><h4>Honor Ball</h4>
+          <p class="donors">Zeldabalca y Tina Arroyo</p>
+
+          <!-- <img class="ball" src="images/MasterBall.png" alt="Master Ball"><h4>Master Ball</h4>
+          <p class="donors">Holo</p>
+
+          <img class="ball" src="images/UltraBall.png" alt="Ultra Ball"><h4>Ultra Ball</h4>
+          <p class="donors">Holo</p>
+
+          <img class="ball" src="images/SuperBall.png" alt="Super Ball"><h4>Super Ball</h4>
+          <p class="donors">Holo</p>
+
+          <h4>Desconocido</h4>
+          <p class="donors">Holo</p> -->
+        </section>
+
+        <nav>
+          <ul>
+            <li><a class="green" href="#usuario_doc">Documentación para usuarios</a>
+              <ol>
+                <li><a href="#usuario_eventos">1. Eventos</a></li>
+              </ol>
+            </li>
+            <li><a class="blue" href="#admin_doc">Documentación para administradores</a>
+              <ol>
+                <li><a href="#admin_ajustes">1. Ajustes</a>
+                  <ol>
+                    <li><a href="#admin_activar_o_desactivar_bot">1. Activar o desactivar el bot</a></li>
+                    <li><a href="#admin_ajustes_generales">2. Ajustes generales</a>
+                      <ol>
+                        <li><a href="#admin_borrar_camigos">1. Borrar códigos de amigos</a></li>
+                        <li><a href="#admin_anti_spam">2. Anti Spam</a></li>
+                        <li><a href="#admin_pulsar_boton_hablar">3. Pulsar botón para hablar</a></li>
+                      </ol>
+                    </li>
+                    <li><a href="#admin_eventos">3. Eventos</a></li>
+                    <li><a href="#admin_noticias">4. Noticias</a></li>
+                    <li><a href="#admin_temporizadores">5. Temporizadores</a></li>
+                    <li><a href="#admin_notificaciones_nocturnas">6. Notificaciones nocturnas</a></li>
+                    <li><a href="#admin_zona_horaria">7. Zona horaria</a></li>
+                    <li><a href="#admin_idioma">8. Idioma</a></li>
+                  </ol>
+                </li>
+                <li><a href="#admin_botones">2. Botones</a></li>
+                <li><a href="#admin_alertas">3. Alertas</a>
+                  <ol>
+                    <li><a href="#admin_alertas_anclar">1. Anclar una alerta</a></li>
+                    <li><a href="#admin_alertas_obtener">2. Obtener una alerta</a></li>
+                    <li><a href="#admin_alertas_borrar">3. Eliminar una alerta</a></li>
+                  </ol>
+                </li>
+                <li><a href="#admin_mensaje_bienvenida">4. Mensaje de bienvenida</a>
+                  <ol>
+                    <li><a href="#admin_img_mensaje_bienvenida">1. Imagen en mensaje de bienvenida [PREMIUM]</a></li>
+                  </ol>
+                </li>
+                <li><a href="#admin_etiquetas_html">5. Etiquetas HTML en mensajes</a></li>
+                <li><a href="#admin_sustitucion_texto">6. Sustitución de texto en mensajes</a></li>
+              </ol>
+            </li>
+            <li><a class="yellow" href="#admin_grupos_premium">Grupos premium</a></li>
+            <li><a class="gray" href="#admin_tablas_informacion">Tablas con información</a>
+              <ol>
+                <li><a href="#admin_tabla_funcionalidades">1. Funcionalidades</a></li>
+                <li><a href="#admin_tabla_permisos">2. Permisos necesarios</a></li>
+              </ol>
+            </li>
+            <li><a class="orange" href="#faq">Preguntas frecuentes</a>
+              <ol>
+                <li><a href="#faq_evitar_spam">1. ¿Cómo evito el spam?</a></li>
+              </ol>
+            </li>
+            <li><a class="red" href="#normas_uso">Normas de uso</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="usuario_doc" class="green">Documentación para usuarios</h2>
+
+      <div>
+        <h3 id="usuario_eventos">1. Eventos</h3>
+
+        <p>
+          La funcionalidad principal disponible en grupos y en canales es un listado de eventos el cual se puede pedir con el comando <span class="highlight">/eventos</span> o escribiendo <span class="highlight">listado de eventos</span>.
+        </p>
+        <p>
+          También se manda notificación cuando empieza o termina un evento.
+        </p>
+        <h4>Canales de eventos:</h4>
+        <ul>
+          <li>Europe/Madrid: <a href="https://t.me/eventoswuspain" target="_blank" rel="noopener">@eventoswuspain</a> | <a href="https://twitter.com/HPWUEventos" target="_blank" rel="noopener">Twitter</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="admin_doc" class="blue">Documentación para administradores</h2>
+
+      <div>
+        <h3 id="admin_ajustes">1. Ajustes</h3>
+
+        <p>
+          Para acceder a los ajustes del bot pon el comando <span class="highlight">/settings@XenophiliusLovegoodBot</span>.
+        </p>
+
+        <h4 id="admin_activar_o_desactivar_bot">1.1. Activar o desactivar el bot</h4>
+
+        <p>
+          Permite activar o desactivar el bot. Cuando está desactivado se mantiene activo lo siguiente:
+        </p>
+
+        <ul>
+          <li>Comandos solo disponibles para administradores (para ahorrar comprobaciones).</li>
+          <li>Anti Spam</li>
+          <li>Pulsar botón para hablar</li>
+          <li>Mensaje de bienvenida</li>
+        </ul>
+
+        <h4 id="admin_ajustes_generales">1.2. Ajustes generales</h4>
+
+        <h5 id="admin_borrar_camigos">1.2.1. Borrar códigos de amigo</h5>
+
+        <p>
+          Con esta opción se borrarán los mensajes que contengan códigos de amigos. Se incluyen capturas de pantalla (salvo las que estén recortadas de forma extraña).
+        </p>
+        <p>
+          Se puede poner un mensaje cuando Xenophilius Lovegood Bot borra un código de amigo usando el comando <span class="highlight">/fctextxeno seguido del mensaje que quieres poner</span>.
+        </p>
+        <p>
+          Para borrar el mensaje pon <span class="highlight">/fctextxeno -</span>.
+        </p>
+        <p>
+          Para obtener el mensaje actual usa el comando <span class="highlight">/getfctextxeno</span>.
+        </p>
+
+        <h5 id="admin_anti_spam">1.2.2. Anti Spam</h5>
+
+        <p>
+          Xenophilius Lovegood Bot borrará los mensajes de spam y baneará al miembro que mandó el mensaje.
+        </p>
+
+        <h5 id="admin_pulsar_boton_hablar">1.2.3. Pulsar botón para hablar</h5>
+
+        <p>
+          Con esta opción cuando entre un nuevo miembro al grupo tendrá que responder a una pregunta pulsando un botón. <b>El mensaje tiene un retardo de 1 segundo para que en el caso de tener otro bot con mensaje de bienvenida, esta se muestre primero.</b>
+        </p>
+        <p>
+          Si se tiene un mensaje de bienvenida configurado con otro bot y se quiere usar esta opción, lo más recomendable es configurar el <a href="#admin_mensaje_bienvenida">mensajes de bienvenida</a> con Xenophilius Lovegood Bot ya que solo se mostraría si el nuevo miembro pulsa el botón correcto.
+        </p>
+
+        <img class="example" src="images/press_button_to_talk.jpg" alt="pulsar botón para hablar">
+
+        <h4 id="admin_eventos">1.3. Eventos</h4>
+
+        <p>
+          Si no has activado los eventos, te pedirá que actives lo actives. Después de hacer esto (o si ya las tenías activadas), podrás activar o desactivar el comando <span class="highlight">/eventos</span>, la notificación diaria (a las 8:45) con el listado de eventos o las notificaciones cuando empieza o termina un evento.
+        </p>
+        <p>
+          <i>Para poder modificar estos ajustes el grupo tiene que tener por lo menos 16 miembros.</i>
+        </p>
+
+        <h4 id="admin_temporizadores">1.5. Temporizadores</h4>
+
+        <p>
+          Permite que se borren algunos mensajes pasado el tiempo que se indique.
+        </p>
+
+        <h4 id="admin_notificaciones_nocturnas">1.6. Notificaciones nocturnas</h4>
+
+        <p>
+          Permite configurar el comportamiento del algunos mensajes que se manden de 1:00 a 7:59.
+        </p>
+        <p>
+          ✅: enviar con sonido<br>
+          🔇: enviar sin sonido<br>
+          ❌: no enviar
+        </p>
+
+        <h4 id="admin_zona_horaria">1.7. Zona horaria</h4>
+
+        <p>
+          Permite cambiar la zona horaria del grupo. Esto sirve para recibir las notificaciones de los eventos y las alertas cuando corresponden.
+        </p>
+
+        <h4 id="admin_idioma">1.8. Idioma</h4>
+
+        <p>
+          Permite cambiar el idioma del bot.
+        </p>
+
+        <h3 id="admin_botones">2. Botones</h3>
+
+        <p>
+          Se pueden incluir botones en las <a href="#admin_alertas">alertas</a>, <a href="#admin_borrar_camigos">mensaje al borrar un código de amigo</a> y <a href="#admin_mensaje_bienvenida">mensajes de bienvenida</a>.
+        </p>
+        <p>
+          Además se puede usar el comando <span class="highlight">/xenobotones</span> para que el bot devuelva un mensaje con botones.
+        </p>
+        <p>
+          <b>Formato:</b>
+        </p>
+        <p>
+          <span class="highlight">"Texto botón" = "https://enlace.com"</span>
+        </p>
+        <p>
+          Para poner más de un botón en la misma fila, pon una coma. Ejemplo:
+        </p>
+        <p>
+          <span class="highlight">"Texto 1" = "https://enlace1.com", "Texto 2" = "https://enlace2.com"</span>
+        </p>
+        <p>
+          <b>Ejemplo:</b>
+        </p>
+        <p>
+          <span class="highlight">Texto<br>"Texto botón" = "https://enlace.com"</span>
+        </p>
+
+        <h3 id="admin_alertas">3. Alertas</h3>
+
+        <p>
+          Se pueden mandar mensajes de forma periódica. Hay un límite de <b>10</b> alertas y se configuran con el comando <span class="highlight">/alertxeno</span>.
+        </p>
+        <p>
+          <b>Ejemplo del comando:</b>
+        </p>
+        <p>
+          <span class="highlight">/alertxeno 1 2019/10/14-12 3 10-18 Texto alerta</span>
+        </p>
+        <p>
+          <b>Ayuda:</b>
+        </p>
+        <p>
+          1: número de la alerta (puede ser un número entre 1 y 10)
+        </p>
+        <p>
+          2019/10/14-12: fecha de referencia con el formato: año/mes/día-hora
+        </p>
+        <p>
+          3: frecuencia en horas con la que se repite la alerta
+        </p>
+        <p>
+          10-18: período de tiempo en el que se manda la alerta
+        </p>
+
+        <h4 id="admin_alertas_anclar">3.1. Anclar una alerta</h4>
+
+        <p>
+          Si quieres que Xenophilius Lovegood Bot ancle la alerta que manda puedes usar los parámetros <span class="highlight">anclarnotificar</span> (notifica a los miembros del grupo) o <span class="highlight">anclar</span>.
+        </p>
+        <p>
+          Ejemplo: <span class="highlight">/alertxeno 1 2019/10/14-12 3 10-18 anclarnotificar Texto alerta</span>.
+        </p>
+
+        <h4 id="admin_alertas_obtener">3.2. Obtener una alerta</h4>
+
+        <p>
+          Si tienes una alerta y quieres editarla puedes obtener el contenido de la alerta (lo que pusiste con el comando <span class="highlight">/alertxeno</span>). Para ello usa el comando <span class="highlight">/getalert</span> seguido del número de la alerta. Ejemplo: <span class="highlight">/getalert 1</span>
+        </p>
+        <p>
+          Si quieres ver todas las alertas del grupo escribe <span class="highlight">/getalert all</span>.
+        </p>
+
+        <h4 id="admin_alertas_borrar">3.3. Eliminar una alerta</h4>
+
+        <p>
+          Para eliminar una alerta escribe el comando <span class="highlight">/alertxeno</span> seguido del número de la alerta y después -. Ejemplo: <span class="highlight">/alertxeno 1 -</span>.
+        </p>
+
+        <h3 id="admin_mensaje_bienvenida">4. Mensaje de bienvenida</h3>
+
+        <p>
+          Para añadir un mensaje de bienvenida usa el comando <span class="highlight">/welcomexeno seguido del mensaje de bienvenida</span>.
+        </p>
+        <p>
+          Ejemplo: <span class="highlight">/welcomexeno Hola mago</span>.
+        </p>
+        <p>
+          Para borrar el mensaje de bienvenida pon <span class="highlight">/welcomexeno -</span>.
+        </p>
+        <p>
+          Para consultar el mensaje de bienvenida actual pon <span class="highlight">/getwelcomexeno</span>.
+        </p>
+
+        <h4 id="admin_img_mensaje_bienvenida">4.1 Imagen en mensaje de bienvenida [PREMIUM]</h4>
+
+        <p>
+          Instrucciones para añadir una imagen de bienvenida:
+        </p>
+        <ol>
+          <li>Manda una imagen al grupo.</li>
+          <li>Cita la imagen y pon el siguiente comando: <span class="highlight">/welcomeimagexeno</span></li>
+        </ol>
+        <p>
+          Instrucciones para borrar una imagen de bienvenida:
+        </p>
+        <ol>
+          <li>Escribe: <span class="highlight">/welcomeimagexeno -</span></li>
+        </ol>
+
+        <h3 id="admin_etiquetas_html">5. Etiquetas HTML en mensajes</h3>
+
+        <p>
+          Se pueden añadir etiquetas HTML en <a href="#admin_alertas">alertas</a>, <a href="#admin_borrar_camigos">mensaje al borrar un código de amigo</a>, <a href="#admin_mensaje_bienvenida">mensajes de bienvenida</a> y con el <a href="#admin_botones">comando /xenobotones</a>.
+        </p>
+        <p>
+          <b>Etiquetas:</b>
+        </p>
+        <ul>
+          <li><b>Negrita:</b> &lt;b&gt;texto&lt;/b&gt;</li>
+          <li><i>Cursiva:</i> &lt;i&gt;texto&lt;/i&gt;</li>
+          <li><u>Subrayado:</u> &lt;u&gt;texto&lt;/u&gt;</li>
+          <li><s>Tachado:</s> &lt;s&gt;texto&lt;/s&gt;</li>
+          <li><code>Mono espaciado:</code> &lt;code&gt;texto&lt;/code&gt;</li>
+        </ul>
+
+        <h3 id="admin_sustitucion_texto">6. Sustitución de texto en mensajes</h3>
+
+        <p>
+          Se puede sustituir texto en <a href="#admin_borrar_camigos">mensaje al borrar un código de amigo</a> y <a href="#admin_mensaje_bienvenida">mensajes de bienvenida</a>.
+        </p>
+        <p>
+          <b>Etiquetas:</b>
+        </p>
+        <ul>
+          <li><b>Nombre del nuevo miembro:</b> <span class="highlight">{user_name}</span>.</li>
+          <li><b>Id del nuevo miembro:</b> <span class="highlight">{user_id}</span>.</li>
+          <li><b>Nombre del nuevo miembro e id:</b> <span class="highlight">{user_name_id}</span>.</li>
+          <li><b>Nombre del grupo:</b> <span class="highlight">{chat_title}</span>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="admin_grupos_premium" class="yellow">Grupos premium</h2>
+
+      <div>
+        <p>
+          Si realizas una donación desde <b><u><a href="https://www.patreon.com/alexelgt" target="_blank" rel="noopener">Patreon</a></u></b> puedes hacer que los grupos de los que eres creador pasen a ser premium durante un tiempo determinado.
+        </p>
+        <h4>Ventajas de los grupos premium:</h4>
+        <ul>
+          <li>Prioridad extra a la hora de recibir los eventos y noticias.</li>
+          <li>Poder activar eventos y noticias en grupos con pocos miembros.</li>
+          <li>Se pueden configurar 25 alertas en vez de 10.</li>
+          <li>Se puede establecer una imagen en el mensaje de bienvenida.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="admin_tablas_informacion" class="gray">Tablas con información</h2>
+
+      <div>
+        <p>
+          A continuación se muestran unas tablas con información adicional del bot.
+        </p>
+
+        <div class="flex-big">
+          <div>
+            <h3 id="admin_tabla_funcionalidades">1. Funcionalidades</h3>
+
+            <p>
+              <b>Leyenda:</b><br>
+              ✅: disponible<br>
+              ❌: no disponible<br>
+              <b>?</b>: desactivado por defecto<br>
+              +XX👨‍👩‍👧‍👦: solo grupos con +XX miembros
+            </p>
+            <table>
+              <tr>
+                <th>Funcionalidad</th>
+                <th>Privado</th>
+                <th>Grupos</th>
+              </tr>
+              <tr>
+                <td>Comando eventos</td>
+                <td>✅</td>
+                <td><b>?</b><br>+16👨‍👩‍👧‍👦</td>
+              </tr>
+              <tr>
+                <td>Notificación diaria (eventos)</td>
+                <td>❌</td>
+                <td><b>?</b><br>+16👨‍👩‍👧‍👦</td>
+              </tr>
+              <tr>
+                <td>Notificación evento empezado/terminado</td>
+                <td>❌</td>
+                <td><b>?</b><br>+16👨‍👩‍👧‍👦</td>
+              </tr>
+              <tr>
+                <td>Comandos</td>
+                <td>✅</td>
+                <td><b>?</b></td>
+              </tr>
+              <tr>
+                <td>Comandos PVP</td>
+                <td>✅</td>
+                <td><b>?</b></td>
+              </tr>
+              <tr>
+                <td>Ajustes</td>
+                <td>❌</td>
+                <td>✅</td>
+              </tr>
+              <tr>
+                <td>Noticias</td>
+                <td>❌</td>
+                <td><b>?</b><br>+16👨‍👩‍👧‍👦</td>
+              </tr>
+              <tr>
+                <td>Alertas</td>
+                <td>❌</td>
+                <td>✅</td>
+              </tr>
+              <tr>
+                <td>Borrar mensajes comunes</td>
+                <td>❌</td>
+                <td><b>?</b></td>
+              </tr>
+              <tr>
+                <td>Borrar códigos de amigo</td>
+                <td>❌</td>
+                <td><b>?</b></td>
+              </tr>
+              <tr>
+                <td>Anti Spam</td>
+                <td>❌</td>
+                <td><b>?</b></td>
+              </tr>
+              <tr>
+                <td>Pulsar botón para hablar</td>
+                <td>❌</td>
+                <td><b>?</b></td>
+              </tr>
+              <tr>
+                <td>Mensaje de bienvenida</td>
+                <td>❌</td>
+                <td>✅</td>
+              </tr>
+            </table>
+          </div>
+
+          <div>
+            <h3 id="admin_tabla_permisos">2. Permisos necesarios</h3>
+
+            <p>
+              <b>Si el grupo tiene el modo lento activado es muy recomendable que se añada al bot como administrador para que no se le apliquen las restricciones de tiempo al mandar mensajes.</b>
+            </p>
+            <table>
+              <tr>
+                <th>Funcionalidad</th>
+                <th>Permisos</th>
+              </tr>
+              <tr>
+                <td>Comando eventos</td>
+                <td>Eliminar mensajes (recomendado)</td> 
+              </tr>
+              <tr>
+                <td>Notificación diaria (eventos)</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>Notificación evento empezado/terminado</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>Comandos</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>Comandos PVP</td>
+                <td>Eliminar mensajes (recomendado)</td>
+              </tr>
+              <tr>
+                <td>Ajustes</td>
+                <td>Eliminar mensajes (recomendado)</td>
+              </tr>
+              <tr>
+                <td>Noticias</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>Alertas</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>Anclar alertas</td>
+                <td>Anclar mensajes</td>
+              </tr>
+              <tr>
+                <td>Borrar mensajes comunes</td>
+                <td>Eliminar mensajes</td>
+              </tr>
+              <tr>
+                <td>Borrar códigos de amigos</td>
+                <td>Eliminar mensajes</td>
+              </tr>
+              <tr>
+                <td>Anti Spam</td>
+                <td>Eliminar mensajes, suspender usuarios</td>
+              </tr>
+              <tr>
+                <td>Pulsar botón para hablar</td>
+                <td>Eliminar mensajes (recomendado), suspender usuarios</td>
+              </tr>
+              <tr>
+                <td>Mensaje de bienvenida</td>
+                <td>-</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="faq" class="orange">Preguntas frecuentes</h2>
+
+      <div>
+        <h3 id="faq_evitar_spam">1. ¿Cómo evito el spam?</h3>
+
+        <p>
+          El bot cuenta con 2 opciones para evitar el spam:
+        </p>
+        <ul>
+          <li><a href="#admin_anti_spam">Anti Spam</a></li>
+          <li><a href="#admin_pulsar_boton_hablar">Pulsar botón para hablar</a></li>
+        </ul>
+        <p>
+          La primera sirve para banear las cuentas que ya estén en el grupo y manden un mensaje que el bot considere como spam.
+        </p>
+        <p>
+          La segunda sirve para evitar que las cuentas que mandan spam se queden en el grupo. <b>En la práctica esta opción es la más efectiva ya que el filtro anti spam podría no saltar.</b>
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="normas_uso" class="red">Normas de uso</h2>
+
+      <div>
+        <p>
+          Solo pueden usar el bot usuarios o grupos que cumplan las <a href="https://nianticlabs.com/terms/es/" target="_blank" rel="noopener">Condiciones de Servicio de Niantic</a>.
+        </p>
+        <p>
+          Si se incumplen dichas condiciones, se podría banear de poder usar el bot al usuario o grupo (normalmente de forma permanente).
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div id="sidebar-overlay" onclick='triggerSideBar();'></div>
+
+  <aside id="sidebar">
+    <h2>Bots</h2>
+    <a href="http://casualbot.alexelgt.com">Casual Bot</a>
+    <a class="selected">Xenophilius Lovegood Bot</a>
+  </aside>
+</body>
 </html>
